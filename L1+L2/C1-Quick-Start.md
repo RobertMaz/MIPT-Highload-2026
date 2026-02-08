@@ -1,6 +1,6 @@
 # C1 Quick Start Guide
 
-> 🎯 Всё что нужно знать для семинара C1 (20.02.2025)
+> 🎯 Всё что нужно знать для семинара C1 (20.02.2026)
 >
 > Время подготовки: **15-20 минут**
 
@@ -196,7 +196,6 @@ Peak RPS = (DAU × req/user × peak_coef) / (peak_hours × 3600)
 
 ### Optional (1+ час):
 
-- [NFR-Checklist](NFR-Checklist.md) — полная версия всех категорий NFR
+- [NFR Framework](NFR-Framework.md) — полная версия всех категорий NFR с обоснованием
 - [Example-Requirements-Internet-Bank](Example-Requirements-Internet-Bank.md) — детальный пример банка
-- [Example-Requirements-E-Commerce](Example-Requirements-E-Commerce.md) — детальный пример e-commerce
 
