@@ -59,7 +59,7 @@ Risk: High (потеря лицензии ЦБ, штрафы)
 → ✅ Архитектурно-значимый (3 из 3 = High)
 ```
 
-**Детали:** [NFR-Framework](NFR-Framework.md)
+**Детали:** [NFR-Framework](L1+L2/NFR-Framework.md)
 
 ---
 
@@ -89,7 +89,7 @@ Peak RPS = (DAU × Requests_per_user × Peak_coefficient) / (Peak_hours × 3600)
 - E-commerce: 5-10x (Черная Пятница)
 - Билеты на концерт: 100-1000x (старт продаж)
 
-**Детали:** [Peak-RPS-Calculator](Peak-RPS-Calculator.md)
+**Детали:** [Peak-RPS-Calculator](L1+L2/Peak-RPS-Calculator.md)
 
 ---
 
@@ -131,7 +131,7 @@ Peak RPS = (DAU × Requests_per_user × Peak_coefficient) / (Peak_hours × 3600)
 - [ ] Security (auth, encryption)
 - [ ] Disaster Recovery (RPO/RTO)
 
-**Детали:** [Requirements-Anti-Patterns](Requirements-Anti-Patterns.md) (опционально, 30 мин)
+**Детали:** [Requirements-Anti-Patterns](L1+L2/Requirements-Anti-Patterns.md) (опционально, 30 мин)
 
 ---
 
@@ -173,7 +173,7 @@ Peak RPS = (DAU × req/user × peak_coef) / (peak_hours × 3600)
 - Risk 1: [описание] → Mitigation: [решение]
 ```
 
-**Полный шаблон:** [Requirements-Template](Requirements-Template.md) (опционально, 15 мин)
+**Полный шаблон:** [Requirements-Template](L1+L2/Requirements-Template.md) (опционально, 15 мин)
 
 ---
 
@@ -191,11 +191,11 @@ Peak RPS = (DAU × req/user × peak_coef) / (peak_hours × 3600)
 
 ### Should Read (30 минут):
 
-- [Requirements-Anti-Patterns](Requirements-Anti-Patterns.md) — детальные примеры ошибок Before/After
-- [Requirements-Template](Requirements-Template.md) — полный шаблон с пояснениями
+- [Requirements-Anti-Patterns](L1+L2/Requirements-Anti-Patterns.md) — детальные примеры ошибок Before/After
+- [Requirements-Template](L1+L2/Requirements-Template.md) — полный шаблон с пояснениями
 
 ### Optional (1+ час):
 
-- [NFR Framework](NFR-Framework.md) — полная версия всех категорий NFR с обоснованием
-- [Example-Requirements-Internet-Bank](Example-Requirements-Internet-Bank.md) — детальный пример банка
+- [NFR Framework](L1+L2/NFR-Framework.md) — полная версия всех категорий NFR с обоснованием
+- [Example-Requirements-Internet-Bank](L1+L2/Example-Requirements-Internet-Bank.md) — детальный пример банка
 
