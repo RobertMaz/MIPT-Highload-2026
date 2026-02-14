@@ -74,9 +74,8 @@ Peak RPS = (DAU x Requests_per_user x Peak_coefficient) / (Peak_hours x 3600)
 
 По желанию:
 
-- [ATAM — SEI](https://insights.sei.cmu.edu/documents/629/2000_005_001_13706.pdf) — полноценный метод анализа архитектурных trade-offs, из
+- [ATAM — SEI](https://www.sei.cmu.edu/documents/629/2000_005_001_13706.pdf) — полноценный метод анализа архитектурных trade-offs, из
   которого вырос NFR Framework выше
 - [Capacity Planning for Web Apps — Kir Shatrov](https://kirshatrov.com/posts/capacity-planning-for-web-apps/) — практический подход к
   capacity planning
-- [Capacity Planning — ByteByteGo](https://blog.bytebytego.com/p/capacity-planning) — визуальный разбор с диаграммами
 - [CAP Theorem — Wikipedia](https://en.wikipedia.org/wiki/CAP_theorem) — trade-offs распределённых систем (подробно на L8)
