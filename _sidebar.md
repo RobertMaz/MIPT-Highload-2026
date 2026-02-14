@@ -3,7 +3,6 @@
 
 - **L1+L2: Введение**
   - [Reading List + C1](L1+L2/README.md)
-  - [NFR Framework](L1+L2/NFR-Framework.md)
   - [Requirements Template](L1+L2/Requirements-Template.md)
 
 - **Полезное**

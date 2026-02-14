@@ -13,7 +13,7 @@
 | # | Что читать | Время | Зачем |
 |---|-----------|-------|-------|
 | 1 | [SLI, SLO, SLA — Google SRE Book, Ch.4](https://sre.google/sre-book/service-level-objectives/) | 15 мин | Как формулировать требования к надёжности измеримо, а не "система должна быть быстрой" |
-| 2 | [NFR Framework](NFR-Framework.md) | 5 мин | Авторский фреймворк курса: как определить, какие NFR влияют на архитектуру (понадобится на C1) |
+| 2 | [Как NFR влияют на архитектуру — Хабр/МТС](https://habr.com/ru/companies/ru_mts/articles/794232/) | 10 мин | Наглядная эволюция архитектуры: от простой схемы к микросервисам по мере добавления NFR |
 
 ### Блок 2: Масштабирование
 
@@ -31,9 +31,21 @@
 
 ---
 
-## Формула Peak RPS
+## NFR Framework
 
-Главная формула курса для расчёта пиковой нагрузки:
+NFR архитектурно-значимый, если **2 из 3 критериев = High**:
+
+| Критерий | High | Low |
+|----------|------|-----|
+| **Impact на структуру** | Меняет фундамент (репликация, шардинг, паттерны) | Конфигурация |
+| **Cost of change** | Нельзя добавить потом — закладывать с первого дня | Можно добавить позже |
+| **Business risk** | Потеря лицензии / бизнеса | Жалобы |
+
+Пример: Availability 99.95% для банка — Impact High, Cost High, Risk High → 3/3, архитектурный приоритет.
+
+---
+
+## Формула Peak RPS
 
 ```
 Peak RPS = (DAU x Requests_per_user x Peak_coefficient) / (Peak_hours x 3600)
@@ -45,40 +57,24 @@ Peak RPS = (DAU x Requests_per_user x Peak_coefficient) / (Peak_hours x 3600)
 
 ## Подготовка к семинару C1
 
-**Дата:** 20.02.2026 | **Время подготовки:** 20 минут (Reading List + шаблон)
-
-### Что будет на C1
+**Дата:** 20.02.2026
 
 Вы получите неполное описание реальной highload-системы. Задачи:
 
 1. **Сформулировать NFR измеримо** — в формате `SLI + оператор + SLO + условия`
-2. **Оценить архитектурную значимость** — применить [NFR Framework](NFR-Framework.md) к каждому NFR
+2. **Оценить архитектурную значимость** — применить NFR Framework к каждому NFR
 3. **Рассчитать Peak RPS** — по формуле выше
 4. **Найти недостающие требования** — что забыли? какие вопросы задать заказчику?
 
-### Формат
-
-- **Think** (индивидуально): 10-15 мин
-- **Pair** (обсуждение с соседом): 10 мин
-- **Share** (презентация): 2-3 пары по 3 мин
-
-### Шаблон
-
-Используйте [Requirements Template](Requirements-Template.md) для оформления результата.
-
-### Чек-лист
-
-- [ ] Прочитал Reading List (~40 мин)
-- [ ] Понял формулу Peak RPS
-- [ ] Готов применять NFR Framework самостоятельно
-- [ ] Принёс калькулятор или ноутбук
+**Шаблон:** [Requirements Template](Requirements-Template.md)
 
 ---
 
 ## Дополнительные материалы
 
-Необязательно, но полезно:
+По желанию:
 
+- [ATAM — SEI](https://insights.sei.cmu.edu/documents/629/2000_005_001_13706.pdf) — полноценный метод анализа архитектурных trade-offs, из которого вырос NFR Framework выше
 - [Capacity Planning for Web Apps — Kir Shatrov](https://kirshatrov.com/posts/capacity-planning-for-web-apps/) — практический подход к capacity planning
 - [Capacity Planning — ByteByteGo](https://blog.bytebytego.com/p/capacity-planning) — визуальный разбор с диаграммами
-- [CAP Theorem — Wikipedia](https://en.wikipedia.org/wiki/CAP_theorem) — теорема, определяющая trade-offs распределённых систем (подробно на L8)
+- [CAP Theorem — Wikipedia](https://en.wikipedia.org/wiki/CAP_theorem) — trade-offs распределённых систем (подробно на L8)
