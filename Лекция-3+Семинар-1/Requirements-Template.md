@@ -8,12 +8,6 @@
 
 # Requirements Document: [Название системы]
 
-**Версия:** 1.0
-**Дата:** YYYY-MM-DD
-**Составил:** [Имя]
-
----
-
 ## 1. Business Goals
 
 **Домен:** [например "Финтех / Платёжный процессинг"]
@@ -51,17 +45,12 @@
 
 ## 3. Нефункциональные требования (НФТ)
 
-### NFR-P01: [Performance - Latency]
+### NFR-001: [Название, например "Performance - Latency"]
 
-**SLI (что измеряем):**
+**SLI (что измеряем):** [например "p95 latency GET /api/products"]
+**SLO (целевое значение):** [например "< 200ms при 10K concurrent users"]
 
-- [например "p95 latency GET /api/products"]
-
-**SLO (целевое значение):**
-
-- [например "< 200ms при 10K concurrent users"]
-
-**Framework оценка:**
+**Оценка архитектурной значимости:**
 
 - **Impact:** High/Medium/Low - [почему]
 - **Cost of Change:** High/Medium/Low - [почему]
@@ -69,25 +58,7 @@
 
 **Архитектурно-значимый:** Да/Нет (2+ из 3 = High?)
 
----
-
-### NFR-A01: [Availability]
-
-**SLI:** % successful requests (HTTP 200-299)
-**SLO:** ≥ 99.X% (макс Y часов downtime/год)
-
-**Framework оценка:** [как выше]
-
----
-
-### NFR-S01: [Scalability Strategy]
-
-**Выбор:** Scale-up / Scale-out / Hybrid
-
-**Обоснование:**
-
-- [почему выбрали эту стратегию]
-- [нагрузка, availability, бюджет, команда]
+> Добавляйте по аналогии: Availability, Scalability, Durability и т.д.
 
 ---
 
@@ -117,11 +88,6 @@ Peak RPS = (DAU × Req/user × Peak_coef) / (Peak_hours × 3600)
          = [результат] RPS
 ```
 
-**Growth Forecast:**
-
-- Year 1: [ожидаемый DAU и RPS]
-- Year 3: [ожидаемый DAU и RPS]
-
 ### Latency Budget
 
 **Endpoint:** [например "POST /api/transfer"]
@@ -141,7 +107,7 @@ Peak RPS = (DAU × Req/user × Peak_coef) / (Peak_hours × 3600)
 
 ---
 
-## 6. Data & Storage
+## 5. Data & Storage
 
 - Текущий объём: [например "500 GB"]
 - Прирост: [например "~2 GB/день"]
@@ -149,19 +115,7 @@ Peak RPS = (DAU × Req/user × Peak_coef) / (Peak_hours × 3600)
 
 ---
 
-## 7. Architecturally Significant NFR
-
-| NFR ID  | Impact | Cost | Risk   | Critical? | Влияние на архитектуру        |
-|---------|--------|------|--------|-----------|-------------------------------|
-| NFR-P01 | High   | High | Medium | ✅ Yes     | CDN, caching, DB optimization |
-| NFR-A01 | High   | High | High   | ✅ Yes     | Multi-AZ, replication, LB     |
-| NFR-S01 | High   | High | Medium | ✅ Yes     | Horizontal scaling, stateless |
-
-**Summary:** [количество] критичных NFR
-
----
-
-## 8. Assumptions
+## 6. Assumptions
 
 **Что предполагаем:**
 
@@ -175,7 +129,7 @@ Peak RPS = (DAU × Req/user × Peak_coef) / (Peak_hours × 3600)
 
 ---
 
-## 9. Risks
+## 7. Risks
 
 | Тип          | Risk                      | Probability     | Impact          | Mitigation                     |
 |--------------|---------------------------|-----------------|-----------------|--------------------------------|
