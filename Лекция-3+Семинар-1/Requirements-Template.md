@@ -16,6 +16,11 @@
 
 ## 1. Business Goals
 
+**Домен:** [например "Финтех / Платёжный процессинг"]
+**Бизнес-модель:** B2C / B2B / B2B2C
+**Целевая аудитория:** [кто пользователи, сколько их]
+**Регионы:** [например "РФ, СНГ" или "Global"]
+
 **Главная цель:**
 
 - [Описание бизнес-цели]
@@ -33,13 +38,9 @@
 
 **Priority:** High / Medium / Low
 
-**User Story:**
+**Описание:**
 
-```
-As a [тип пользователя]
-I want to [действие]
-So that [цель/выгода]
-```
+- Как [роль], я хочу [действие], чтобы [цель/выгода]
 
 **Acceptance Criteria:**
 
@@ -92,12 +93,14 @@ So that [цель/выгода]
 
 ## 4. Load Calculations
 
+**Read/Write ratio:** [например "90/10" или "60/40"]
+
 **Current State:**
 
 - DAU: [число]
-- Average RPS: [расчет]
+- Average RPS: [расчёт]
 
-**Peak Scenario: [Название]**
+### Peak Scenario: [Название, например "День зарплаты"]
 
 **Дано:**
 
@@ -106,7 +109,7 @@ So that [цель/выгода]
 - Peak coefficient: [число]x
 - Peak hours: [часы]
 
-**Расчет Peak RPS:**
+**Расчёт Peak RPS:**
 
 ```
 Peak RPS = (DAU × Req/user × Peak_coef) / (Peak_hours × 3600)
@@ -138,7 +141,15 @@ Peak RPS = (DAU × Req/user × Peak_coef) / (Peak_hours × 3600)
 
 ---
 
-## 5. Architecturally Significant NFR
+## 6. Data & Storage
+
+- Текущий объём: [например "500 GB"]
+- Прирост: [например "~2 GB/день"]
+- Консистентность: Strong / Eventual — [почему]
+
+---
+
+## 7. Architecturally Significant NFR
 
 | NFR ID  | Impact | Cost | Risk   | Critical? | Влияние на архитектуру        |
 |---------|--------|------|--------|-----------|-------------------------------|
@@ -150,7 +161,7 @@ Peak RPS = (DAU × Req/user × Peak_coef) / (Peak_hours × 3600)
 
 ---
 
-## 6. Assumptions
+## 8. Assumptions
 
 **Что предполагаем:**
 
@@ -164,10 +175,9 @@ Peak RPS = (DAU × Req/user × Peak_coef) / (Peak_hours × 3600)
 
 ---
 
-## 7. Risks
+## 9. Risks
 
-| Risk     | Probability     | Impact          | Mitigation |
-|----------|-----------------|-----------------|------------|
-| [Риск 1] | High/Medium/Low | High/Medium/Low | [Решение]  |
-| [Риск 2] | High/Medium/Low | High/Medium/Low | [Решение]  |
-
+| Тип          | Risk                      | Probability     | Impact          | Mitigation                     |
+|--------------|---------------------------|-----------------|-----------------|--------------------------------|
+| Технический  | [например "SPOF"]         | High/Medium/Low | High/Medium/Low | [например "репликация, LB"]    |
+| Операционный | [например "нет rollback"] | High/Medium/Low | High/Medium/Low | [например "blue-green deploy"] |
