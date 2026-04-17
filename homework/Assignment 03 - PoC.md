@@ -99,6 +99,8 @@ docker compose up
 
 Инструменты: k6, Locust, Gatling, wrk, jmeter — на ваш выбор.
 
+Готовый рабочий пример (с семинара): `Лекция-10+Семинар-8/spring-petclinic-load-test/` — k6-скрипты (smoke / load / stress / spike), docker-compose со Spring Petclinic микросервисами + MySQL + Grafana/Prometheus. Поднимаете локально, смотрите как устроено, адаптируете под свой стек.
+
 Где искать bottleneck (наводки — дальше думайте сами):
 
 - Slow queries: `EXPLAIN ANALYZE`, `pg_stat_statements`, slow query log — встроено в БД, ничего ставить не нужно.

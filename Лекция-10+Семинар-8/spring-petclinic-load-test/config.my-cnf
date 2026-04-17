@@ -1,0 +1,6 @@
+[client]
+user = root
+password = petclinic
+[client.servers]
+user = root
+password = petclinic
