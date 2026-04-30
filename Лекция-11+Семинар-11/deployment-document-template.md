@@ -15,6 +15,14 @@
 - <Сервис B> ×<N> — ...
 - ...
 
+Адресация (на диаграмме и/или в описании):
+
+- FQDN для публичных входов и service-to-service (`api.example.com`, `payment.svc.cluster.local`)
+- Порты на стрелках (`:443`, `:5432`)
+- CIDR/подсети AZ/VPC, если важна сетевая топология (`10.0.1.0/24`)
+- Static IP — указывайте, если адрес действительно фиксированный (NAT GW, LB VIP, on-prem узел, anycast)
+- НЕ указывайте эфемерные IP подов/инстансов за autoscaling — они меняются и засоряют диаграмму
+
 > Канонический пример C4 deployment diagram: https://c4model.com/diagrams/deployment
 
 ---
