@@ -1,0 +1,73 @@
+<mxfile host="Electron" agent="Mozilla/5.0">
+  <diagram id="deployment-skeleton" name="Deployment View">
+    <mxGraphModel dx="1783" dy="1020" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" value="Deployment Diagram: &lt;Название системы&gt;" vertex="1">
+          <mxGeometry height="40" width="800" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;verticalAlign=top;fontStyle=1;fontSize=12" value="Легенда" vertex="1">
+          <mxGeometry height="200" width="380" x="1180" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-stateless" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Stateless service" vertex="1">
+          <mxGeometry height="40" width="160" x="1200" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-stateful" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Stateful (БД, кэш, очередь)" vertex="1">
+          <mxGeometry height="40" width="160" x="1200" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-external" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;" value="External (вне нашего контура)" vertex="1">
+          <mxGeometry height="40" width="160" x="1200" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-replicas" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;align=left;verticalAlign=top;fontSize=11" value="×N — количество реплик&#xa;Public / Private — network zone" vertex="1">
+          <mxGeometry height="140" width="180" x="1380" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="az-a" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;fontStyle=1;fontSize=14;dashed=0;strokeWidth=2" value="AZ-A" vertex="1">
+          <mxGeometry height="800" width="540" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="az-a-public" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;verticalAlign=top;fontStyle=2;fontSize=11;dashed=1" value="public zone" vertex="1">
+          <mxGeometry height="160" width="500" x="60" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="az-a-private" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;verticalAlign=top;fontStyle=2;fontSize=11;dashed=1" value="private zone" vertex="1">
+          <mxGeometry height="560" width="500" x="60" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="az-b" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;fontStyle=1;fontSize=14;dashed=0;strokeWidth=2" value="AZ-B" vertex="1">
+          <mxGeometry height="800" width="540" x="600" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="az-b-public" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;verticalAlign=top;fontStyle=2;fontSize=11;dashed=1" value="public zone" vertex="1">
+          <mxGeometry height="160" width="500" x="620" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="az-b-private" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#6c8ebf;verticalAlign=top;fontStyle=2;fontSize=11;dashed=1" value="private zone" vertex="1">
+          <mxGeometry height="560" width="500" x="620" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="example-gw-a" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12" value="API Gateway ×1&#xa;(пример)" vertex="1">
+          <mxGeometry height="60" width="160" x="200" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="hint-public" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontStyle=2;fontColor=#888888" value="↑ public zone — то, что доступно снаружи (LB, API Gateway)" vertex="1">
+          <mxGeometry height="20" width="380" x="1200" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="hint-private" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontStyle=2;fontColor=#888888" value="↓ private zone — backend сервисы, БД, кэш" vertex="1">
+          <mxGeometry height="20" width="380" x="1200" y="345" as="geometry" />
+        </mxCell>
+        <mxCell id="stencil-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontStyle=1" value="Палитра (копируйте отсюда):" vertex="1">
+          <mxGeometry height="20" width="360" x="1200" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="stencil-service" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12" value="&lt;Service&gt; ×N" vertex="1">
+          <mxGeometry height="60" width="160" x="1200" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="stencil-db" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12" value="&lt;Database&gt;&#xa;primary / replica" vertex="1">
+          <mxGeometry height="80" width="120" x="1380" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="stencil-external" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;dashed=1;fontSize=12" value="&lt;External Service&gt;" vertex="1">
+          <mxGeometry height="50" width="160" x="1380" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="checklist-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=12;fontStyle=1" value="Чеклист готовой диаграммы:" vertex="1">
+          <mxGeometry height="20" width="360" x="1200" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="checklist" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontSize=11" value="□ AZ-A и AZ-B обозначены, контейнеры разнесены&#xa;□ public / private zones явно&#xa;□ ×N replicas подписаны на каждом сервисе&#xa;□ Stateful (БД, кэш) выделены цветом&#xa;□ External-зависимости — пунктиром&#xa;□ Стрелки направлены — кто кого зовёт&#xa;□ Стрелки подписаны (TLS / async / replication)" vertex="1">
+          <mxGeometry height="170" width="360" x="1200" y="710" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
